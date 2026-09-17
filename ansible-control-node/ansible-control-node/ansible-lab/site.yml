@@ -1,0 +1,6 @@
+---
+- name: Import base package installation
+  ansible.builtin.import_playbook: install.yml
+
+- name: Import web server deployment
+  ansible.builtin.import_playbook: webserver.yml

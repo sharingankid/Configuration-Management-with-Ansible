@@ -1,0 +1,23 @@
+---
+- name: Install base packages
+  hosts: web
+  become: true
+
+  vars:
+    base_packages:
+      - curl
+      - vim
+      - htop
+      - tree
+      - unzip
+
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: true
+        cache_valid_time: 3600
+
+    - name: Ensure base packages are present
+      ansible.builtin.apt:
+        name: "{{ base_packages }}"
+        state: present

@@ -1,0 +1,8 @@
+# These settings are for disposable learning hosts only. A production
+# environment should verify host keys against a trusted known_hosts file.
+Host *
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+    LogLevel ERROR
+    ServerAliveInterval 30
+    ServerAliveCountMax 6

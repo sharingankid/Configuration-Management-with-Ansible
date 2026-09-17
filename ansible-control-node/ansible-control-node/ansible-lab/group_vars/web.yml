@@ -1,0 +1,5 @@
+---
+http_port: 80
+server_name: devops-lab-v2
+doc_root: /var/www/html
+admin_email: admin@lab.local
